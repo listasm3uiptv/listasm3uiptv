@@ -1,16 +1,19 @@
-## Hi there 👋
+# IPTV Gratis · Listas M3U (Mayo 2026)
 
-<!--
-**listasm3uiptv/listasm3uiptv** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Sitio estático listo para GitHub Pages.
 
-Here are some ideas to get you started:
+## Publicar en GitHub Pages
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+1. Crea un repo, por ejemplo `tu-usuario.github.io` (o cualquier repo).
+2. Sube todos los archivos de esta carpeta a la rama `main`.
+3. Ve a **Settings → Pages** y selecciona la rama `main` / carpeta `/ (root)`.
+4. Tu sitio estará disponible en `https://tu-usuario.github.io/` (o `/nombre-repo/`).
+
+## Archivos
+
+- `index.html` — página principal
+- `404.html` — página de error
+- `.nojekyll` — desactiva Jekyll para servir tal cual
+- `robots.txt` y `sitemap.xml` — SEO básico
+
+> Nota: los enlaces M3U son ilustrativos. Reemplázalos por los tuyos en `index.html`.

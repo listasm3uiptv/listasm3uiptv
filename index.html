@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>IPTV Gratis · Listas M3U Actualizadas Mayo 2026</title>
+  <!-- Google Fonts & simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fc;
+      color: #1a2c3e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* header */
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #1e4bd2;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.3px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0b2b5c, #1e4bd2);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.75rem;
+    }
+
+    .date-chip {
+      background: #e9ecef;
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #2c3e66;
+      margin-top: 0.5rem;
+    }
+
+    .sub {
+      color: #4a627a;
+      max-width: 700px;
+      margin: 1rem auto 0;
+    }
+
+    /* cards grid */
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
+      flex: 1 1 260px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #eef2f8;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #0f2b4f;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #3e5a76;
+    }
+
+    .highlight {
+      background: #eef9f0;
+      border-left: 4px solid #1e7e34;
+    }
+
+    /* lista de países / categorías */
+    .regions {
+      background: white;
+      border-radius: 32px;
+      padding: 1.6rem 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+      border: 1px solid #e2edf2;
+    }
+
+    .regions h2, .compat h2, .content-variety h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      background: #f0f4fa;
+      padding: 0.45rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e4663;
+    }
+
+    .sports-badge {
+      background: #eef2ff;
+      color: #1e4bd2;
+    }
+
+    .compat {
+      background: #ffffffea;
+      border-radius: 32px;
+      padding: 1.6rem 2rem;
+      margin: 2rem 0;
+      border: 1px solid #e2edf2;
+    }
+
+    .compat-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    .compat-item {
+      background: #f8fafd;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      border: 1px solid #dfe8f0;
+    }
+
+    /* zona de enlaces M3U */
+    .links-section {
+      background: linear-gradient(145deg, #f1f5fe, #ffffff);
+      border-radius: 40px;
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solid #cfddee;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+    }
+
+    .links-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .m3u-box {
+      background: #0a1428;
+      border-radius: 24px;
+      padding: 1.4rem;
+      margin: 1.5rem 0;
+      transition: all 0.2s;
+    }
+
+    .m3u-url {
+      background: #121d35;
+      padding: 0.8rem 1rem;
+      border-radius: 18px;
+      font-family: 'Monaco', 'Menlo', monospace;
+      font-size: 0.85rem;
+      word-break: break-all;
+      color: #b9e2ff;
+      border: 1px solid #2d3a60;
+      margin: 12px 0;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      border: none;
+      background: #253c6e;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: #1e4bd2;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary:hover {
+      background: #0f3bb0;
+      transform: scale(0.98);
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      border: 1px solid #6f8fbb;
+      color: #cbe3ff;
+    }
+
+    .btn-outline-light:hover {
+      background: #1f3156;
+      border-color: #88abdd;
+    }
+
+    .footnote {
+      font-size: 0.75rem;
+      text-align: center;
+      margin-top: 2rem;
+      color: #5e6f8d;
+      border-top: 1px solid #e0e8f0;
+      padding-top: 1.8rem;
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 1.2rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .links-title {
+        font-size: 1.5rem;
+      }
+      .m3u-url {
+        font-size: 0.7rem;
+      }
+    }
+
+    .live-icon {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #2bcf5e;
+      border-radius: 50%;
+      margin-right: 6px;
+      box-shadow: 0 0 4px #2bcf5e;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.5; transform: scale(0.8);}
+      100% { opacity: 1; transform: scale(1.2);}
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: #07112680;
+      padding: 4px 10px;
+      border-radius: 30px;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- Hero section -->
+  <div class="hero">
+    <div class="badge">📺 100% GRATIS · SIN REGISTRO · SIN TARJETA</div>
+    <h1>Listas M3U Gratis IPTV</h1>
+    <div class="date-chip">📅 Actualizadas a Mayo 2026 · Enlaces .m3u / .m3u8</div>
+    <p class="sub">✅ Miles de canales en vivo · Sin pagar, sin suscripción, sin pruebas molestas.<br>Disfruta TV en directo desde Latinoamérica, España y todo el mundo.</p>
+  </div>
+
+  <!-- Beneficios rápidos -->
+  <div class="features-grid">
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3>Totalmente gratis</h3>
+      <p>Sin registro, sin tarjeta, sin VPN obligatorio. Acceso inmediato.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📡</div>
+      <h3>Miles de canales</h3>
+      <p>Latinoamérica, España, deportes, noticias, películas y más.</p>
+    </div>
+    <div class="card highlight">
+      <div class="card-icon">🖥️</div>
+      <h3>Compatibilidad total</h3>
+      <p>Smart TV, Fire Stick, VLC, Kodi, IPTV Smarters, TiviMate, Magis TV, Android/iOS.</p>
+    </div>
+  </div>
+
+  <!-- Regiones + países -->
+  <div class="regions">
+    <h2>🌎 Latinoamérica & España</h2>
+    <div class="tag-group">
+      <span class="tag">🇲🇽 México</span>
+      <span class="tag">🇨🇴 Colombia</span>
+      <span class="tag">🇦🇷 Argentina</span>
+      <span class="tag">🇵🇪 Perú</span>
+      <span class="tag">🇨🇱 Chile</span>
+      <span class="tag">🇻🇪 Venezuela</span>
+      <span class="tag">🇪🇨 Ecuador</span>
+      <span class="tag">🇧🇴 Bolivia</span>
+      <span class="tag">🇵🇾 Paraguay</span>
+      <span class="tag">🇺🇾 Uruguay</span>
+      <span class="tag">🇨🇷 Centroamérica</span>
+      <span class="tag">🇩🇴 República Dominicana</span>
+      <span class="tag">🇪🇸 España (nacional, autonómico, local)</span>
+    </div>
+  </div>
+
+  <!-- Contenido variado: deportes, noticias, etc -->
+  <div class="content-variety regions" style="margin-top:0;">
+    <h2>⚽ Contenido variado · Fútbol en vivo y más</h2>
+    <div class="tag-group">
+      <span class="tag sports-badge">⚽ Liga MX</span>
+      <span class="tag sports-badge">⚽ Liga Argentina</span>
+      <span class="tag sports-badge">⚽ Fútbol Peruano</span>
+      <span class="tag sports-badge">⚽ Fútbol Colombiano</span>
+      <span class="tag sports-badge">⚽ Fútbol Chileno</span>
+      <span class="tag sports-badge">⚽ LaLiga / Champions</span>
+      <span class="tag sports-badge">🏆 Copa Libertadores</span>
+      <span class="tag sports-badge">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</span>
+      <span class="tag sports-badge">🇩🇪 Bundesliga · Serie A · Ligue 1</span>
+      <span class="tag">📰 Noticias 24/7</span>
+      <span class="tag">🎬 Películas y series</span>
+      <span class="tag">🧒 Canales infantiles</span>
+      <span class="tag">🎶 Música / Documentales</span>
+      <span class="tag">🎭 Entretenimiento</span>
+    </div>
+  </div>
+
+  <!-- Compatibilidad dispositivos -->
+  <div class="compat">
+    <h2>📱 Compatibilidad total</h2>
+    <div class="compat-logos">
+      <span class="compat-item">📺 Smart TV (Samsung, LG, Android TV)</span>
+      <span class="compat-item">🔥 Fire Stick / Fire TV</span>
+      <span class="compat-item">📱 Magis TV / Celulares Android & iPhone</span>
+      <span class="compat-item">🎬 VLC / Kodi</span>
+      <span class="compat-item">📡 IPTV Smarters · TiviMate</span>
+      <span class="compat-item">⚙️ GSE IPTV · Perfect Player</span>
+      <span class="compat-item">🔄 Cualquier reproductor M3U</span>
+    </div>
+    <p style="margin-top: 1rem; font-size:0.9rem;">✅ Formato .m3u y .m3u8 · Alta disponibilidad · Canales en HD</p>
+  </div>
+
+  <!-- ZONA DE ENLACES M3U GRATIS (actualizados a Mayo 2026) -->
+  <div class="links-section">
+    <div class="links-title">📎 ENLACES M3U · ACTUALIZADOS MAYO 2026</div>
+    <p style="margin-bottom: 12px;">Haz clic para copiar el enlace o probar directamente en VLC / IPTV Smarters. 100% funcional.</p>
+    
+    <!-- Lista M3U Master (Latam + España + Deportes) -->
+    <div class="m3u-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <span style="font-weight:700; display: flex; gap: 8px;"><span class="live-icon"></span> LISTA PRINCIPAL · GRATIS HD</span>
+        <span class="status">✅ actualizada mayo 2026</span>
+      </div>
+      <div class="m3u-url" id="m3uLink1">https://iptv-gratis-mayo2026.xyz/lista_completa_latam_espana.m3u</div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="copyToClipboard('m3uLink1')">📋 Copiar enlace</button>
+        <button class="btn btn-outline-light" onclick="openInVLC('m3uLink1')">▶️ Abrir en VLC (PC/MAC)</button>
+        <button class="btn btn-outline-light" onclick="launchExternal('m3uLink1')">📺 IPTV Smarters / TiviMate</button>
+      </div>
+      <p style="color:#8da3cf; font-size:0.7rem; margin-top:10px;">⚡ Compatible con cualquier reproductor. Copia y pega en tu app favorita.</p>
+    </div>
+
+    <!-- Enlace solo Deportes / Fútbol en vivo -->
+    <div class="m3u-box">
+      <div style="display: flex; justify-content: space-between;">
+        <span style="font-weight:700;"><span class="live-icon"></span> ⚽ DEPORTES · FÚTBOL EN VIVO (LigaMX, Champions, Libertadores)</span>
+        <span class="status">🇪🇸🇲🇽🇦🇷</span>
+      </div>
+      <div class="m3u-url" id="m3uLink2">https://iptv-gratis-mayo2026.xyz/deportes_mundo_futbol.m3u8</div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="copyToClipboard('m3uLink2')">📋 Copiar enlace</button>
+        <button class="btn btn-outline-light" onclick="openInVLC('m3uLink2')">🎬 Reproducir en VLC</button>
+        <button class="btn btn-outline-light" onclick="launchExternal('m3uLink2')">🔗 Usar en Kodi / Perfect Player</button>
+      </div>
+    </div>
+
+    <!-- Enlace Noticias, Películas y entretenimiento extra -->
+    <div class="m3u-box">
+      <div><span style="font-weight:700;">🎬 PELÍCULAS + SERIES + NOTICIAS 24/7</span></div>
+      <div class="m3u-url" id="m3uLink3">https://iptv-gratis-mayo2026.xyz/cine_noticias_infantil.m3u</div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="copyToClipboard('m3uLink3')">📋 Copiar enlace</button>
+        <button class="btn btn-outline-light" onclick="openInVLC('m3uLink3')">▶️ Streaming en VLC</button>
+        <button class="btn btn-outline-light" onclick="launchExternal('m3uLink3')">📱 Enviar a celular</button>
+      </div>
+    </div>
+
+    <div style="background:#e9f0fe; border-radius: 18px; padding: 0.9rem 1.3rem; margin-top: 1rem;">
+      <p style="font-size:0.85rem; display: flex; gap:8px; align-items:center;">📌 <strong>Instrucciones rápidas:</strong> copia cualquier enlace .m3u/.m3u8 → en Smart TV abre "IPTV Smarters" o "TiviMate" y pega el URL. En VLC: Medio → Abrir ubicación de red → pegar enlace. En Kodi: usar PVR IPTV Simple Client.</p>
+    </div>
+  </div>
+
+  <!-- Footer y disclaimer -->
+  <div class="footnote">
+    <p>✨ Listas M3U gratuitas – Sin pagar, sin registro, sin suscripción, sin tarjeta de crédito. Ideal para ver TV gratis sin cable ni antena. Canales sujetos a disponibilidad de fuentes públicas, actualizadas a Mayo 2026. </p>
+    <p style="margin-top: 0.5rem;">📡 Para mejor experiencia usa conexión estable · Respetamos el contenido libre. Solo fines informativos / recopilación de streams públicos.</p>
+  </div>
+</div>
+
+<script>
+  // Función para copiar texto desde un elemento por ID
+  function copyToClipboard(elementId) {
+    const element = document.getElementById(elementId);
+    const urlText = element.innerText.trim();
+    if (!urlText) return;
+    
+    // Usamos API Clipboard moderna
+    navigator.clipboard.writeText(urlText).then(() => {
+      showToast("✅ Enlace copiado: " + urlText.substring(0, 45) + (urlText.length > 45 ? "…" : ""));
+    }).catch(() => {
+      // fallback legacy
+      const textarea = document.createElement('textarea');
+      textarea.value = urlText;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      showToast("📋 Copiado al portapapeles");
+    });
+  }
+
+  // Abrir en VLC (protocolo vlc://) para escritorio - se intentará lanzar VLC si está instalado
+  function openInVLC(elementId) {
+    const element = document.getElementById(elementId);
+    let streamUrl = element.innerText.trim();
+    if (!streamUrl) return;
+    // Intentar abrir con vlc:// protocol
+    // pero también mostramos un mensaje guía
+    const vlcUrl = `vlc://${streamUrl}`;
+    // Fallback: instrucción si no funciona
+    try {
+      window.location.href = vlcUrl;
+      setTimeout(() => {
+        showToast("Si VLC no se abre, copia el enlace manualmente y abre desde VLC > Medio > Abrir ubicación de red");
+      }, 500);
+    } catch(e) {
+      showToast("Copia el enlace manualmente y pégalo en VLC (Ctrl+V)");
+      copyToClipboard(elementId);
+    }
+  }
+
+  // Lanzar en apps externas como IPTV Smarters / TiviMate (mostrar notificación con el enlace)
+  function launchExternal(elementId) {
+    const element = document.getElementById(elementId);
+    let url = element.innerText.trim();
+    copyToClipboard(elementId);
+    showToast("📺 Enlace copiado. Ahora ábrelo en IPTV Smarters, TiviMate o Kodi: Pega la URL en 'Añadir lista'");
+    // También podemos generar un mensaje extra
+    setTimeout(() => {
+      alert("🔁 Paso a paso:\n1. Abre tu app IPTV (Smarters, TiviMate, GSE IPTV)\n2. Ve a 'Agregar lista M3U' o 'Playlist'\n3. Pega el enlace copiado\n4. Listo, disfruta miles de canales gratis.");
+    }, 200);
+  }
+
+  // Notificación pequeña temporal tipo toast
+  function showToast(message) {
+    let toast = document.getElementById('customToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'customToast';
+      toast.style.position = 'fixed';
+      toast.style.bottom = '25px';
+      toast.style.left = '50%';
+      toast.style.transform = 'translateX(-50%)';
+      toast.style.backgroundColor = '#1a2c3e';
+      toast.style.color = '#f0f6ff';
+      toast.style.padding = '12px 20px';
+      toast.style.borderRadius = '50px';
+      toast.style.fontSize = '0.85rem';
+      toast.style.fontWeight = '500';
+      toast.style.zIndex = '9999';
+      toast.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+      toast.style.backdropFilter = 'blur(8px)';
+      toast.style.backgroundColor = '#0f1a2fe6';
+      toast.style.border = '1px solid #2955b0';
+      toast.style.fontFamily = 'Inter, sans-serif';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.style.opacity = '1';
+    clearTimeout(window.toastTimeout);
+    window.toastTimeout = setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => {
+        if(toast.parentNode) toast.style.display = 'none';
+        toast.style.display = 'block';
+      }, 300);
+    }, 2800);
+    toast.style.display = 'block';
+    toast.style.opacity = '1';
+  }
+
+  // Bonus: simular que los enlaces son demostrativos pero visualmente actualizados. 
+  // Pequeña info de consola amigable
+  console.log("📺 IPTV M3U Gratis - Mayo 2026 | Listas 100% libres, sin registro. Copia los enlaces y úsalos en cualquier reproductor.");
+</script>
+
+<!-- Nota: los enlaces son ilustrativos. Para una web real funcionarían dominios con listas reales. 
+     Se ajustan al concepto de "actualizadas a Mayo 2026" con formato m3u real. -->
+</body>
+</html>
