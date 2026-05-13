@@ -2,6 +2,10 @@
 
 ## Archivos
 
+### ✅️ [ONE THOUSAND IPTV](https://www.1000iptv.bond)
+
+[REF](https://github.com/listaiptvdehoy/iptv)
+
 - `index.html` — página principal
 - `404.html` — página de error
 - `.nojekyll` — desactiva Jekyll para servir tal cual
